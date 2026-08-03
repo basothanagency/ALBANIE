@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albanie · 9 → 16 août</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#07161F;--ink-2:#0E2430;--ink-3:#16333F;--line:#204552;--sand:#EFE6D2;--sand-dim:#A8B4B8;--lagoon:#31E0C0;--signal:#FF7043;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--sand);font-family:"Inter Tight",system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(38px,8vw,76px)}
+h2{font-size:clamp(26px,4vw,38px);margin-bottom:6px}
+h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+p{max-width:68ch}
+a{color:var(--lagoon)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lagoon)}
+.dim{color:var(--sand-dim)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.lead{color:var(--sand-dim);margin-top:14px;font-size:17px}
+header{padding:52px 0 8px}
+.stub{margin-top:34px;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stub-top{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;padding:26px 24px}
+.iata{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(34px,7vw,58px);line-height:1}
+.iata span{display:block;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:400;color:var(--sand-dim);margin-top:8px}
+.iata.r{text-align:right}
+.plane{color:var(--lagoon);font-size:22px}
+.perf{border-top:1px dashed var(--line)}
+.stub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line)}
+.cell{background:var(--ink-2);padding:16px 24px}
+.cell .k{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-dim)}
+.cell .v{font-size:18px;font-weight:600;margin-top:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card.pick{border-color:var(--lagoon)}
+.shot{width:100%;height:170px;object-fit:cover;display:block;background:var(--ink-3)}
+.body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 9px;border-radius:99px;background:var(--ink-3);color:var(--sand-dim);margin-bottom:10px;align-self:flex-start}
+.tag.go{background:rgba(49,224,192,.14);color:var(--lagoon)}
+.card p{font-size:14.5px;color:var(--sand-dim);margin-top:8px}
+.stars{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--sand-dim);margin-top:10px}
+.price{font-family:"JetBrains Mono",monospace;font-size:15px;color:var(--sand);margin-top:10px}
+.links{margin-top:auto;padding-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.links a{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 12px;color:var(--lagoon)}
+.links a:hover{border-color:var(--lagoon)}
+.links a.tel{color:var(--sand-dim)}
+.day{display:grid;grid-template-columns:104px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}
+.day:last-of-type{border-bottom:none}
+.day .when{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--lagoon);padding-top:5px;letter-spacing:.05em}
+.day .when em{display:block;font-style:normal;color:var(--sand-dim);margin-top:4px}
+.day p{font-size:15px;color:var(--sand-dim);margin-top:5px}
+.tbl{width:100%;border-collapse:collapse;margin-top:22px;font-size:14.5px}
+.tbl th{text-align:left;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sand-dim);padding:10px 12px;border-bottom:1px solid var(--line);font-weight:400}
+.tbl td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--sand-dim)}
+.tbl td:first-child{color:var(--sand);font-weight:500}
+.tbl .num{font-family:"JetBrains Mono",monospace;color:var(--sand);white-space:nowrap}
+.scroll{overflow-x:auto}
+.sim{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:26px;margin-top:26px}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.f label{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sand-dim);margin-bottom:7px}
+.f select,.f input[type=number]{width:100%;background:var(--ink);color:var(--sand);border:1px solid var(--line);border-radius:8px;padding:11px 12px;font-family:"Inter Tight",sans-serif;font-size:14.5px}
+.f select:focus,.f input:focus{outline:2px solid var(--lagoon);outline-offset:1px}
+.chk{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:14.5px;color:var(--sand-dim)}
+.chk input{width:17px;height:17px;accent-color:var(--lagoon)}
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:26px}
+.tot{background:var(--ink-3);border-radius:10px;padding:16px}
+.tot .k{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sand-dim)}
+.tot .v{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:30px;margin-top:4px;line-height:1}
+.tot.hero .v{color:var(--lagoon)}
+.bd{margin-top:24px;border-top:1px solid var(--line)}
+.bd .row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--sand-dim)}
+.bd .row b{font-family:"JetBrains Mono",monospace;font-weight:400;color:var(--sand);white-space:nowrap}
+.bd .row.sum{color:var(--sand);font-weight:600;border-bottom:none;padding-top:14px}
+.bd .row.sum b{font-weight:700;color:var(--lagoon)}
+.note{border-left:2px solid var(--signal);padding:2px 0 2px 16px;margin-top:24px;font-size:14.5px;color:var(--sand-dim)}
+.note b{color:var(--signal);font-weight:600}
+ol.todo{list-style:none;counter-reset:t;margin-top:24px}
+ol.todo li{counter-increment:t;padding:14px 0 14px 46px;border-bottom:1px solid var(--line);position:relative;color:var(--sand-dim);font-size:15px}
+ol.todo li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--lagoon)}
+ol.todo li b{color:var(--sand);font-weight:600}
+ol.todo li a{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(49,224,192,.4);margin-left:6px}
+footer{padding:50px 0 70px;border-top:1px solid var(--line);color:var(--sand-dim);font-size:13.5px}
+@media(max-width:620px){.day{grid-template-columns:1fr;gap:6px}.stub-top{padding:20px 16px}.cell{padding:14px 16px}.sim{padding:18px}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <p class="eyebrow">Trois gars, sept nuits, deux pays</p>
+  <h1>Albanie<br>9 → 16 août</h1>
+  <p class="lead">Une nuit à Corfou en porte d'entrée, six nuits à Saranda, une échappée d'une journée sur la Riviera. Tout est ici : le vol, les lits avec leurs liens, chaque trajet, et un simulateur pour arbitrer avant de payer.</p>
+
+  <div class="stub">
+    <div class="stub-top">
+      <div class="iata">LIL<span>LILLE — LESQUIN</span></div>
+      <div class="plane">✈</div>
+      <div class="iata r">CFU<span>CORFOU — KERKYRA</span></div>
+    </div>
+    <div class="perf"></div>
+    <div class="stub-grid">
+      <div class="cell"><div class="k">Compagnie</div><div class="v">Volotea</div></div>
+      <div class="cell"><div class="k">Aller · dim 9 août</div><div class="v">arrivée 23:15</div></div>
+      <div class="cell"><div class="k">Retour · dim 16 août</div><div class="v">départ 23:45</div></div>
+      <div class="cell"><div class="k">Vol + bagage 10 kg</div><div class="v">241 € / pers</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <p class="eyebrow">Le plan</p>
+  <h2>Huit jours, deux bases</h2>
+  <p class="lead">Ksamil ferme à 22h, Saranda tient jusqu'à 4h. On dort donc à Saranda et on descend à Ksamil en journée. Six nuits d'affilée au même endroit : une seule réservation, un seul déballage.</p>
+
+  <div class="day"><div class="when">DIM 9<em>Corfou</em></div><div>
+    <h3>Atterrissage 23h15</h3>
+    <p>Taxi jusqu'à la vieille ville, dix minutes. Une bière quelque part et au lit. Personne ne se lève tôt demain.</p></div></div>
+
+  <div class="day"><div class="when">LUN 10<em>Corfou → Saranda</em></div><div>
+    <h3>Matinée grecque, traversée l'après-midi</h3>
+    <p>Grasse matinée, café sur le Liston, tour de la vieille ville. Ferry en début d'après-midi, trente minutes de mer, arrivée à Saranda en fin d'après-midi. Installation et première soirée sur la promenade.</p></div></div>
+
+  <div class="day"><div class="when">MAR 11<em>Ksamil</em></div><div>
+    <h3>Les trois îlots, tôt</h3>
+    <p>Sur place avant 9h : à 11h les transats sont pris et se négocient 30 à 40 €. Water-taxi jusqu'aux îles, retour à Saranda pour le soir.</p></div></div>
+
+  <div class="day"><div class="when">MER 12<em>Saranda</em></div><div>
+    <h3>Butrint et le Blue Eye</h3>
+    <p>La cité antique le matin, la source l'après-midi. La journée culture se place ici précisément parce que c'est le jour où vous serez le moins en état.</p></div></div>
+
+  <div class="day"><div class="when">JEU 13<em>Saranda</em></div><div>
+    <h3>Boat party</h3>
+    <p>Sortie en mer Saranda–Ksamil, boissons comprises : la façon la plus rapide de rencontrer du monde en trois heures. Club en ville derrière.</p></div></div>
+
+  <div class="day"><div class="when">VEN 14<em>Dhërmi</em></div><div>
+    <h3>La Riviera, dans la journée</h3>
+    <p>Départ 7h en van privé, halte café à Himara, arrivée vers 9h30. Plage de galets — chaussons obligatoires — journée au Havana, col de Llogara au coucher du soleil. Retour vers 21h30, le chauffeur conduit, pas vous.</p></div></div>
+
+  <div class="day"><div class="when">SAM 15<em>Saranda</em></div><div>
+    <h3>Récupération et dernière nuit</h3>
+    <p>Plage le matin, sieste l'après-midi. C'est votre vraie dernière soirée : dimanche est une journée de transit.</p></div></div>
+
+  <div class="day"><div class="when">DIM 16<em>Corfou</em></div><div>
+    <h3>Ferry du matin, vol du soir</h3>
+    <p>Traversée vers 9h, sacs en consigne, journée dans la vieille ville. Vol à 23h45, atterrissage à Lille lundi 1h35.</p></div></div>
+
+  <div class="note"><b>Le seul horaire non négociable :</b> le ferry du dimanche 16 se prend le matin, pas en fin de journée. Si la traversée saute pour cause de mer agitée, vous avez une journée de marge au lieu de zéro.</div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Le vol</p>
+  <h2>177 € + le bagage</h2>
+  <p class="lead">Le billet seul n'inclut qu'un sac de 40×30×20 cm sous le siège. Vous voulez un vrai bagage : il faut l'option Embarquement Prioritaire, qui ajoute un trolley de 55×40×20 cm.</p>
+
+  <div class="scroll"><table class="tbl">
+    <tr><th>Poste</th><th>Ce que ça donne</th><th>Par personne</th></tr>
+    <tr><td>Billet aller-retour</td><td>Vol + sac personnel sous le siège</td><td class="num">177 €</td></tr>
+    <tr><td>Embarquement prioritaire</td><td>Trolley 55×40×20 cm en cabine</td><td class="num">≈ 64 €</td></tr>
+    <tr><td colspan="2" style="color:var(--sand);font-weight:600">Total par personne</td><td class="num" style="color:var(--lagoon)">241 €</td></tr>
+  </table></div>
+
+  <div class="note"><b>Les 10 kg sont le poids cumulé des deux pièces, pas celui du trolley seul.</b> Sac à dos plus valise, tout compris. Au-dessus, le bagage part en soute au portique pour 65 € la pièce, et Volotea plafonne à 70 bagages cabine par vol — d'où l'intérêt de réserver l'option maintenant plutôt qu'à l'aéroport.</div>
+  <div class="links" style="margin-top:20px"><a href="https://www.volotea.com">Réserver sur volotea.com</a></div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Corfou · dimanche 9 · 1 nuit</p>
+  <h2>Un lit, pas un séjour</h2>
+  <p class="lead">Vous arrivez à 23h15 et vous repartez le lendemain après-midi. Visez la vieille ville : dix minutes de l'aéroport, et vous aurez la matinée pour en profiter avant le ferry.</p>
+
+  <div class="cards">
+    <div class="card">
+      <img class="shot" alt="Kâmara Old Town Studios" src="https://lh3.googleusercontent.com/place-photos/AG9NLjCeGNFIk_fN3PXxC0YIJ7bgk37ZgaTzoC7UYFqKKA70EHnLAG2DpNP-QJe_6DAp-Ag2_vm7nFQyJ3zAwpmJW6edMhEJpkfpxuvf5Y6bWRAFxZet6cM6u7bsS0WceaKXyRWrthfxSYDPVvMBqQ=s4800-w800-h600">
+      <div class="body"><span class="tag">Éco</span><h3>Kâmara Old Town Studios</h3>
+        <p>Studios dans la vieille ville, isolation phonique sérieuse malgré les bars en bas. L'hôte garde les bagages le jour du départ. Escalier en colimaçon raide.</p>
+        <div class="stars">4,8 ★ · 69 avis</div><div class="price">≈ 90 € la nuit / 3</div>
+        <div class="links"><a href="https://www.hotelswebgr.com/kamara-old-town-studios/">Réserver</a><a href="https://maps.google.com/?cid=16717732201593586049">Carte</a><a class="tel" href="tel:+306930418200">+30 693 041 8200</a></div>
+      </div></div>
+
+    <div class="card pick">
+      <img class="shot" alt="Locandiera" src="https://lh3.googleusercontent.com/place-photos/AG9NLjAoZypPY3odCUB4_hZTntNdE3-xVasEVcg06FN2yOkCQ3MVfqcuj8xpIBcMuwDbVW5mfidSj03qqb-QPNuJzDC6AUmOze3bUS5Gr2qNyE9Gtxj_VAPwDCeoQzGyFPS_nSGSUAXYJ_GrkRdH=s4800-w800-h600">
+      <div class="body"><span class="tag go">Le choix</span><h3>Locandiera</h3>
+        <p>Maison historique au cœur de la vieille ville UNESCO, tenue par Paolo, Angela et Tamara. Dix minutes de l'aéroport, œufs à la commande le matin. Bons conseils de sorties.</p>
+        <div class="stars">4,8 ★ · 255 avis</div><div class="price">≈ 130 € la nuit / 3</div>
+        <div class="links"><a href="http://www.locorfu.com/">Réserver</a><a href="https://maps.google.com/?cid=4656516345601601850">Carte</a><a class="tel" href="tel:+302661039035">+30 2661 039035</a></div>
+      </div></div>
+
+    <div class="card">
+      <img class="shot" alt="Siora Vittoria Boutique Hotel" src="https://lh3.googleusercontent.com/place-photos/AG9NLjDmTaIyq1t5G_Uz_UvxqIhpuWHscJ3mGcEScEIbc77b-ahOB15PWX8VAvadHIQEtQeqUcWcfpkfItajPqNgcjIGN2jP-eTbZZkL55PAjN-k2KidQxQajkYq_r1JshFllJC0g6F6jry5RokWTg=s4800-w800-h600">
+      <div class="body"><span class="tag">Large</span><h3>Siora Vittoria</h3>
+        <p>Demeure du 19e avec jardin, petit-déjeuner sous la treille. Entre vieille ville et centre moderne, calme malgré la folie d'août. Réception ouverte 24h/24, utile à minuit.</p>
+        <div class="stars">4,6 ★ · 176 avis</div><div class="price">≈ 160 € la nuit / 3</div>
+        <div class="links"><a href="https://www.sioravittoria.com/">Réserver</a><a href="https://maps.google.com/?cid=15420085045941834408">Carte</a><a class="tel" href="tel:+302661036300">+30 2661 036300</a></div>
+      </div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Saranda · 10 → 16 · 6 nuits</p>
+  <h2>Le camp de base</h2>
+  <p class="lead">Une seule réservation pour toute la semaine. Prenez un appartement avec cuisine et climatisation : à trois, c'est ce qui fait vraiment baisser la note, et vous rentrez du club à pied.</p>
+
+  <div class="cards">
+    <div class="card">
+      <img class="shot" alt="Suncoast Rooms Port Side" src="https://lh3.googleusercontent.com/place-photos/AG9NLjClD8QCnD2gdQ3NrAPoJwdDh3qEPLUm_FrkbINiNPtbrFn3TvQ4heJuzjhFKFLgxY-PnJBV0BB4SgTy5ovn_z5iYGzci_hmOvOv61MS3gwK_Y6UkqmvzTjjwfySE5d_FZxb8gXS4SOn3Nq8R2hhPw0dGg=s4800-w800-h600">
+      <div class="body"><span class="tag">Éco</span><h3>Suncoast Rooms — Port Side</h3>
+        <p>Cinq minutes à pied du terminal ferry, à deux pas de la rue des bars. Terrasse privative, machine à café. L'hôtesse attend les arrivées tardives quand le bateau a du retard.</p>
+        <div class="stars">4,9 ★ · 50 avis</div><div class="price">≈ 70 € la nuit / 3</div>
+        <div class="links"><a href="http://www.suncoast-rooms.al/">Réserver</a><a href="https://maps.google.com/?cid=11249058972383302770">Carte</a><a class="tel" href="tel:+355693755116">+355 69 375 5116</a></div>
+      </div></div>
+
+    <div class="card pick">
+      <img class="shot" alt="Comfort Apartments Promenade" src="https://lh3.googleusercontent.com/place-photos/AG9NLjD0GylBa7bYnExYTM8Z_OTt3l-0Og9jwm1cGTDt2hnRqLifIsFM7xLBbJsNAYWHCyRF4Iu3XGModTLOSGnF3PCcJQNR4cZV5ExWUikiBcoM9HEPFn1vznujIOg6ASkenH3YwS6JvaNzH0b2wg=s4800-w800-h600">
+      <div class="body"><span class="tag go">Le choix</span><h3>Comfort Apartments Promenade</h3>
+        <p>Cuisine complète, lave-linge et étendoir, supermarché en bas, trois minutes de la plage. Surtout : juste à côté de la gare routière et de l'arrêt du bus pour Ksamil. Andrea répond en quelques minutes.</p>
+        <div class="stars">4,9 ★ · 63 avis</div><div class="price">≈ 90 € la nuit / 3</div>
+        <div class="links"><a href="https://www.booking.com/Share-bzgEpI">Réserver</a><a href="https://maps.google.com/?cid=291101558128996962">Carte</a><a class="tel" href="tel:+355675636202">+355 67 563 6202</a></div>
+      </div></div>
+
+    <div class="card">
+      <img class="shot" alt="ERAL Apart-Hotel and Penthouse" src="https://lh3.googleusercontent.com/place-photos/AG9NLjCr7dBXwlcwXPAkfP-l_HWAK7g3hrTWplfwzNYxw_EC094ohpWfvYNIOgJIzWugkHwjFlGHxajt3aBD2qYLdBqqothelj7XLyHnLYAzZd7_NBLQlF8zcZXQV0IGRght--1ERtecerqaDwjMARi4ZE3TnQ=s4800-w800-h600">
+      <div class="body"><span class="tag">Alternative</span><h3>ERAL Apart-Hotel &amp; Penthouse</h3>
+        <p>Grand balcon avec vue, appartements très spacieux, parking inclus. Un ancien client résume : « idéal à trois, on a passé la semaine sur la terrasse ». Ernest donne de bonnes adresses.</p>
+        <div class="stars">4,7 ★ · 71 avis</div><div class="price">≈ 85 € la nuit / 3</div>
+        <div class="links"><a href="https://ernest-apartments.al/">Réserver</a><a href="https://maps.google.com/?cid=14765724988146964377">Carte</a><a class="tel" href="tel:+355689179009">+355 68 917 9009</a></div>
+      </div></div>
+
+    <div class="card">
+      <img class="shot" alt="DAED Luxury Residence" src="https://lh3.googleusercontent.com/place-photos/AG9NLjBhnKnJ2GEv-ay8GZpndiwnWW4fg2QvE08T6WpeGmSJu8E-i-R7iSTVEncoYAZ1guX408kaaeOaLVfbesq-BdYp9x-UpHcq-KjH9y71mEHReSxYb-e2CZAPJl8ydxN5KjyWeA7fu7F2bUXrPHo=s4800-w800-h600">
+      <div class="body"><span class="tag">Large</span><h3>DAED Luxury Residence</h3>
+        <p>Accès direct à la mer depuis la terrasse — on saute dedans — bar à cocktails sur place, appartements neufs. Le cran au-dessus si les gars veulent de la vue et un plongeoir.</p>
+        <div class="stars">4,8 ★ · 62 avis</div><div class="price">≈ 140 € la nuit / 3</div>
+        <div class="links"><a href="http://luxury-residence.al/">Réserver</a><a href="https://maps.google.com/?cid=7618604154105821401">Carte</a><a class="tel" href="tel:+355697047027">+355 69 704 7027</a></div>
+      </div></div>
+  </div>
+
+  <div class="note"><b>Ces montants sont des estimations d'août, pas des devis.</b> Écrivez directement par WhatsApp aux numéros ci-dessus : à six nuits, la plupart de ces hôtes négocient mieux que les plateformes. Demandez systématiquement l'annulation gratuite.</div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Comment on bouge</p>
+  <h2>Tous les trajets, point par point</h2>
+
+  <div class="scroll"><table class="tbl">
+    <tr><th>Trajet</th><th>Comment</th><th>Durée</th><th>Prix</th></tr>
+    <tr><td>Mouscron → Lille-Lesquin</td><td>Voiture + parking longue durée, ou dépose par un proche</td><td>30 min</td><td class="num">0 – 80 €</td></tr>
+    <tr><td>Aéroport Corfou → vieille ville</td><td>Taxi. Le bus ne roule plus à 23h15.</td><td>10 min</td><td class="num">15 – 20 €</td></tr>
+    <tr><td>Corfou → Saranda · lun 10</td><td>Ferry rapide de l'après-midi. Finikas Lines, Ionian Seaways, Albania Luxury Ferries.</td><td>30 min</td><td class="num">20 – 30 € / pers</td></tr>
+    <tr><td>Saranda → Ksamil</td><td>Bus local toutes les 30 min depuis la gare routière, ou taxi</td><td>20 – 25 min</td><td class="num">1 – 15 €</td></tr>
+    <tr><td>Saranda → Butrint</td><td>Bus local depuis la promenade</td><td>30 min</td><td class="num">≈ 1 € / pers</td></tr>
+    <tr><td>Saranda → Blue Eye</td><td>Excursion organisée ou taxi partagé</td><td>40 min</td><td class="num">15 – 30 € / pers</td></tr>
+    <tr><td>Saranda ↔ Dhërmi · ven 14</td><td><b>Van privé avec chauffeur à la journée.</b> Le bus côtier ne permet pas l'aller-retour : il vous déposerait sur la nationale en hauteur et vous rateriez le dernier retour.</td><td>2h – 2h30 par sens</td><td class="num">200 – 250 € le van</td></tr>
+    <tr><td>Saranda → Corfou · dim 16</td><td>Ferry du matin, réservé à l'avance</td><td>30 min</td><td class="num">20 – 30 € / pers</td></tr>
+    <tr><td>Corfou → aéroport</td><td>Taxi, ou la navette proposée par les consignes à bagages</td><td>10 min</td><td class="num">12 – 20 €</td></tr>
+  </table></div>
+  <div class="links" style="margin-top:18px"><a href="https://www.directferries.com/corfu_saranda_ferry.htm">Ferry aller · Corfou → Saranda</a><a href="https://www.directferries.com/saranda_corfu_ferry.htm">Ferry retour · Saranda → Corfou</a><a href="https://www.getyourguide.com/sarande-l122815/nightlife-bars-tc109/">Boat parties &amp; pub crawls</a></div>
+
+  <h3 style="margin-top:44px">Les consignes à bagages de Corfou</h3>
+  <p class="dim" style="font-size:14.5px;margin-top:6px">Indispensables le dimanche 16 : vous débarquez avec les sacs à 9h30 et le vol est à 23h45.</p>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Adresse</th><th>Horaires</th><th>Le plus</th><th></th></tr>
+    <tr><td>Luggage Storage Corfu</td><td>8h – 23h30</td><td>Casiers avec clé, transfert aéroport proposé autour de 12 €</td><td><a href="https://maps.google.com/?cid=4168399230334784093">Carte</a></td></tr>
+    <tr><td>Yellow Lockers</td><td>24h/24</td><td>Climatisé, wifi et prises. Arrêt du bus aéroport juste à côté.</td><td><a href="https://maps.google.com/?cid=1955322175100695856">Carte</a></td></tr>
+    <tr><td>Liston Lockers</td><td>24h/24</td><td>La position la plus centrale des trois, à côté du Liston</td><td><a href="https://maps.google.com/?cid=6255302847432359305">Carte</a></td></tr>
+  </table></div>
+
+  <div class="note"><b>Ne conduisez pas jusqu'à Dhërmi.</b> La côte et le col de Llogara enchaînent les virages sans éclairage, et vous rentrerez de nuit après une journée de beach club. Le van avec chauffeur coûte 75 € chacun : c'est le meilleur argent du voyage. Votre logeur à Saranda peut l'organiser.</div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Le simulateur</p>
+  <h2>Changez un paramètre, voyez la note</h2>
+  <p class="lead">Remplacez les valeurs par défaut par les vrais prix que vous avez sous les yeux. Le total se recalcule tout seul.</p>
+
+  <div class="sim">
+    <div class="ctrls">
+      <div class="f"><label>Voyageurs</label><input type="number" id="pax" min="1" max="8" value="3"></div>
+      <div class="f"><label>Vol A/R par personne</label><input type="number" id="fly" min="0" step="1" value="177"></div>
+      <div class="f"><label>Bagage</label><select id="bag">
+        <option value="64" selected>Trolley 10 kg chacun — 64 €</option>
+        <option value="30">Une soute partagée à trois — 30 €</option>
+        <option value="0">Sac perso uniquement — 0 €</option>
+      </select></div>
+      <div class="f"><label>Corfou · 1 nuit</label><select id="cfu">
+        <option value="90">Kâmara Old Town — 90 €</option>
+        <option value="130" selected>Locandiera — 130 €</option>
+        <option value="160">Siora Vittoria — 160 €</option>
+      </select></div>
+      <div class="f"><label>Saranda · par nuit</label><select id="sar">
+        <option value="70">Suncoast Port Side — 70 €</option>
+        <option value="85">ERAL Apart-Hotel — 85 €</option>
+        <option value="90" selected>Comfort Promenade — 90 €</option>
+        <option value="140">DAED Residence — 140 €</option>
+      </select></div>
+      <div class="f"><label>Nuits à Saranda</label><input type="number" id="nsar" min="0" max="10" value="6"></div>
+      <div class="f"><label>Journée Dhërmi · van pour le groupe</label><input type="number" id="van" min="0" step="10" value="220"></div>
+      <div class="f"><label>Vie sur place par jour et par personne</label><input type="number" id="life" min="0" step="5" value="45"></div>
+    </div>
+
+    <label class="chk"><input type="checkbox" id="boat" checked> Boat party Saranda–Ksamil · 50 € par personne</label>
+    <label class="chk"><input type="checkbox" id="taxi" checked> Taxis, consigne, transats, petits transferts · 45 € par personne</label>
+
+    <div class="totals">
+      <div class="tot hero"><div class="k">Par personne</div><div class="v" id="tPax">—</div></div>
+      <div class="tot"><div class="k">Vol + lits seuls</div><div class="v" id="tCore">—</div></div>
+      <div class="tot"><div class="k">Total du groupe</div><div class="v" id="tGrp">—</div></div>
+    </div>
+
+    <div class="bd" id="bd"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Maintenant</p>
+  <h2>Dans l'ordre, et vite</h2>
+  <ol class="todo">
+    <li><b>Le vol Volotea, avec l'Embarquement Prioritaire.</b> Vérifiez que les 177 € sont bien par passager avant de valider.<a href="https://www.volotea.com">volotea.com</a></li>
+    <li><b>Le ferry du dimanche 16 au matin.</b> Le 16 août est le pire jour de l'année pour improviser une traversée.<a href="https://www.directferries.com/saranda_corfu_ferry.htm">Réserver</a></li>
+    <li><b>La nuit du 9 à Corfou.</b> Vieille ville, et signalez l'arrivée à 23h15 à l'hôte.<a href="http://www.locorfu.com/">Locandiera</a></li>
+    <li><b>Saranda, six nuits du 10 au 16.</b> Écrivez par WhatsApp avant de passer par la plateforme.<a href="https://www.booking.com/Share-bzgEpI">Comfort Promenade</a></li>
+    <li><b>Le ferry de l'aller, lundi 10 en début d'après-midi.</b> Vérifiez l'horaire exact, il change selon les opérateurs.<a href="https://www.directferries.com/corfu_saranda_ferry.htm">Réserver</a></li>
+    <li><b>Le van du vendredi 14.</b> Demandez-le à votre logeur dès la confirmation : les chauffeurs de confiance se réservent.</li>
+    <li><b>Passeports.</b> Corfou → Saranda est une frontière hors Schengen. La carte d'identité ne suffit pas.</li>
+  </ol>
+  <div class="note"><b>La Grèce a une heure d'avance sur l'Albanie.</b> C'est ce décalage qui fait rater les bateaux, à l'aller comme au retour. Réglez vos téléphones et faites le calcul deux fois le dimanche 16.</div>
+</section>
+
+<footer class="wrap">
+  <p>Document de travail — les prix d'hébergement, de transport et de sortie sont des estimations pour août 2026, à confirmer au moment de réserver. Les horaires et le tarif du vol proviennent de la réservation consultée. Photos et notes : fiches Google des établissements.</p>
+</footer>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var eur=function(n){return Math.round(n).toLocaleString('fr-FR')+' €'};
+  var ids=['pax','fly','bag','cfu','sar','nsar','van','life','boat','taxi'];
+
+  function calc(){
+    var pax=Math.max(1,+$('pax').value||1),
+        fly=+$('fly').value||0,
+        bag=+$('bag').value,
+        cfu=+$('cfu').value,
+        sar=+$('sar').value,
+        nsar=+$('nsar').value||0,
+        van=+$('van').value||0,
+        life=+$('life').value||0;
+
+    var nights=1+nsar;
+    var lodge=(cfu+sar*nsar)/pax;
+    var ferry=50;
+    var dhermi=van/pax;
+    var boat=$('boat').checked?50:0;
+    var taxi=$('taxi').checked?45:0;
+    var living=life*nights;
+
+    var core=fly+bag+lodge;
+    var all=core+ferry+dhermi+boat+taxi+living;
+
+    $('tPax').textContent=eur(all);
+    $('tCore').textContent=eur(core);
+    $('tGrp').textContent=eur(all*pax);
+
+    var rows=[
+      ['Vol aller-retour',fly],
+      ['Bagage',bag],
+      ['Hébergement · '+nights+' nuits, part de chacun',lodge],
+      ['Ferry Corfou ↔ Saranda, aller-retour',ferry],
+      ['Journée Dhërmi, van partagé',dhermi],
+      ['Boat party',boat],
+      ['Taxis, consigne, transats',taxi],
+      ['Repas, bars, clubs · '+nights+' jours',living]
+    ].filter(function(r){return r[1]>0});
+
+    $('bd').innerHTML=rows.map(function(r){
+      return '<div class="row"><span>'+r[0]+'</span><b>'+eur(r[1])+'</b></div>';
+    }).join('')+'<div class="row sum"><span>Total par personne</span><b>'+eur(all)+'</b></div>';
+  }
+
+  ids.forEach(function(i){
+    var el=$(i);
+    el.addEventListener(el.type==='checkbox'?'change':'input',calc);
+    if(el.tagName==='SELECT')el.addEventListener('change',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
